@@ -803,4 +803,146 @@ h1 {
     font-size: 15rem;
   }
 }
+
+.sector {
+  padding: 10rem;
+}
+
+.sector h2 {
+  font-size: 26rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sector p {
+  font-size: 14rem;
+  text-align: center;
+  margin-bottom: 20rem;
+}
+
+.sector__types {
+  display: -ms-grid;
+  display: grid;
+}
+
+.sector__wrap {
+  display: -ms-grid;
+  display: grid;
+  margin-bottom: 15rem;
+}
+
+.sector__picture {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
+}
+
+.sector__picture img {
+  width: 100%;
+}
+
+.sector__name {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  z-index: 2;
+  font-family: "OpenSans ExtraBold";
+  color: var(--light);
+  font-size: 26rem;
+  text-align: center;
+}
+
+.sector__browse {
+  border: 1px var(--beta) solid;
+  padding: 10rem;
+  border-radius: 5rem;
+  text-align: center;
+  color: var(--beta);
+  margin-bottom: 15rem;
+}
+
+.sector__mlist, .sector__list {
+  font-size: 17rem;
+}
+
+.sector__mlist span, .sector__list span {
+  color: var(--beta);
+  font-size: 14rem;
+}
+
+.sector__mlist li, .sector__list li {
+  margin-top: 8rem;
+}
+
+.sector__list {
+  display: none;
+}
+
+@media (min-width: 767px) {
+  .sector h2 {
+    font-size: 34rem;
+  }
+  .sector p {
+    font-size: 18rem;
+  }
+  .sector__types {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10rem;
+  }
+  .sector__browse, .sector__mlist {
+    display: none;
+  }
+  .sector__list {
+    display: block;
+    font-size: 15rem;
+  }
+}
+
+.footer {
+  margin-block: auto;
+  background-color: var(--gamma);
+  color: var(--delta);
+  padding: 12rem;
+  font-size: 13rem;
+  text-align: center;
+}
+
+.body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr auto;
+      grid-template-rows: 1fr auto;
+  min-height: 100vh;
+}
+
+.cookie {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr min-content;
+      grid-template-columns: 1fr -webkit-min-content;
+      grid-template-columns: 1fr min-content;
+  background-color: var(--beta);
+  color: var(--delta);
+  padding: 12rem;
+  position: fixed;
+  width: 100%;
+  bottom: 40rem;
+}
+
+.cookie a {
+  text-decoration: underline;
+  font-weight: bold;
+}
 /*# sourceMappingURL=main.css.map */
