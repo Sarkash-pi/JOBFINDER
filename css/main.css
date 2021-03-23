@@ -917,14 +917,26 @@ h1 {
   padding: 12rem;
   font-size: 13rem;
   text-align: center;
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.body {
+html {
+  height: 100%;
+}
+
+body {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr auto;
       grid-template-rows: 1fr auto;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .cookie {
