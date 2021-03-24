@@ -1,0 +1,65 @@
+.listing {
+    margin: 30rem 10rem;
+    color: var(--gamma);
+
+    &__card {
+            border: 1.5px var(--beta) solid;
+        background-color: var(--light);
+        padding: 15rem;
+        border-radius: 5rem;
+        box-shadow: 1px 2px 3px 1px var(--elements);
+        margin-bottom: 20rem;
+    }
+
+    &__header {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        grid-template-columns: 1fr auto;
+        grid-gap: 5rem;
+    }
+
+    &__title {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+
+        font-weight: bolder;
+        font-size: 21rem;
+        color: var(--beta);
+    }
+
+    &__saved {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+        justify-self: right;
+    }
+
+    &__company {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        font-size: 13rem;
+        span {
+            color: var(--beta);
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10rem;
+
+        margin-top: 15rem;
+        font-size: 13rem;
+
+        li {
+            display: flex;
+            img {
+                margin-right: 7rem;
+            }
+        }
+
+        li:nth-of-type(2) {
+            justify-self: right;
+        }
+    }
+}
