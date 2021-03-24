@@ -13,8 +13,8 @@
 
     &__header {
         display: grid;
-        grid-template-rows: 1fr auto;
-        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto;
         grid-gap: 5rem;
     }
 
@@ -61,5 +61,37 @@
         li:nth-of-type(2) {
             justify-self: right;
         }
+    }
+
+    &__detail {
+        margin-top: 20rem;
+        font-size: 14rem;
+        line-height: 20rem;
+    }
+
+    &__cta {
+        font-size: 14rem;
+        text-decoration: underline;
+        text-align: right;
+        display: block;
+
+        &--light {
+            color: var(--beta);
+        }
+
+        &--alert {
+            color: var(--alert);
+        }
+    }
+
+    @include respond-to('small') {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+
+        &__card {
+            display: grid;
+            grid-column: 2 / 3;
+        }
+
     }
 }
