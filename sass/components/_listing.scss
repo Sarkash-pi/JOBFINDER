@@ -1,6 +1,7 @@
 .listing {
     margin: 30rem 10rem;
     color: var(--gamma);
+    
 
     &__card {
             border: 1.5px var(--beta) solid;
@@ -87,11 +88,5 @@
     @include respond-to('small') {
         display: grid;
         grid-template-columns: min-content 1fr;
-
-        &__card {
-            display: grid;
-            grid-column: 2 / 3;
-        }
-
     }
 }
