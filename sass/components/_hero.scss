@@ -17,6 +17,12 @@
         margin-bottom: 13rem;
 
     }
+
+    h2 {
+        font-size: 19rem;
+        color: var(--gamma);
+        font-weight: bold;
+    }
     
     @include respond-to('small') {
         &__wrap {

@@ -9,15 +9,16 @@
   --light: #FFF;
   --skills: #e1e1e1;
   --amber:  #FFC107;
+  --gainsboro: #DBDBDB;
 }
 
 @font-face {
-  font-family: "open sans";
+  font-family: "Open Sans";
   src: url(../../fonts/OpenSans-Regular.ttf);
 }
 
 @font-face {
-  font-family: "open sans ExtraBold";
+  font-family: "OpenSans ExtraBold";
   src: url(../../fonts/OpenSans-ExtraBold.ttf);
 }
 
@@ -625,6 +626,12 @@ h1 {
   margin-bottom: 13rem;
 }
 
+.hero h2 {
+  font-size: 19rem;
+  color: var(--gamma);
+  font-weight: bold;
+}
+
 @media (min-width: 767px) {
   .hero__wrap {
     max-width: 895rem;
@@ -804,112 +811,6 @@ h1 {
   }
 }
 
-.sector {
-  padding: 10rem;
-}
-
-.sector h2 {
-  font-size: 26rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-.sector p {
-  font-size: 14rem;
-  text-align: center;
-  margin-bottom: 20rem;
-}
-
-.sector__types {
-  display: -ms-grid;
-  display: grid;
-}
-
-.sector__wrap {
-  display: -ms-grid;
-  display: grid;
-  margin-bottom: 15rem;
-}
-
-.sector__picture {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-  -webkit-filter: brightness(30%);
-          filter: brightness(30%);
-}
-
-.sector__picture img {
-  width: 100%;
-}
-
-.sector__name {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  z-index: 2;
-  font-family: "OpenSans ExtraBold";
-  color: var(--light);
-  font-size: 26rem;
-  text-align: center;
-}
-
-.sector__browse {
-  border: 1px var(--beta) solid;
-  padding: 10rem;
-  border-radius: 5rem;
-  text-align: center;
-  color: var(--beta);
-  margin-bottom: 15rem;
-}
-
-.sector__mlist, .sector__list {
-  font-size: 17rem;
-}
-
-.sector__mlist span, .sector__list span {
-  color: var(--beta);
-  font-size: 14rem;
-}
-
-.sector__mlist li, .sector__list li {
-  margin-top: 8rem;
-}
-
-.sector__list {
-  display: none;
-}
-
-@media (min-width: 767px) {
-  .sector h2 {
-    font-size: 34rem;
-  }
-  .sector p {
-    font-size: 18rem;
-  }
-  .sector__types {
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 10rem;
-  }
-  .sector__browse, .sector__mlist {
-    display: none;
-  }
-  .sector__list {
-    display: block;
-    font-size: 15rem;
-  }
-}
-
 .footer {
   margin-block: auto;
   background-color: var(--gamma);
@@ -963,6 +864,29 @@ body {
   color: var(--gamma);
 }
 
+.listing__more h1 {
+  margin: 25rem 0;
+  font-size: 17rem;
+}
+
+.listing__skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.listing__skills li {
+  background-color: var(--gainsboro);
+  padding: 7rem 9rem;
+  font-size: 14rem;
+  border-radius: 16rem;
+  margin-right: 10rem;
+  margin-bottom: 10rem;
+  font-weight: bold;
+}
+
 .listing__card {
   border: 1.5px var(--beta) solid;
   background-color: var(--light);
@@ -971,6 +895,13 @@ body {
   -webkit-box-shadow: 1px 2px 3px 1px var(--elements);
           box-shadow: 1px 2px 3px 1px var(--elements);
   margin-bottom: 20rem;
+}
+
+.listing__card--apply {
+  border-radius: 0;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .listing__header {
@@ -1028,7 +959,7 @@ body {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   grid-gap: 10rem;
-  margin-top: 15rem;
+  margin: 15rem 0;
   font-size: 13rem;
 }
 
@@ -1048,7 +979,6 @@ body {
 }
 
 .listing__detail {
-  margin-top: 20rem;
   font-size: 14rem;
   line-height: 20rem;
 }
@@ -1118,5 +1048,33 @@ body {
   color: var(--beta);
   font-weight: bolder;
   font-family: "OpenSans ExtraBold";
+}
+
+.lisitng__saved_summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 15rem;
+}
+
+.lisitng__saved_summary li:first-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.lisitng__saved_summary li:first-of-type span {
+  margin-right: 10rem;
+}
+
+.lisitng__saved_summary li:last-of-type {
+  background-color: var(--elements);
+  color: var(--light);
+  padding: 2rem 3rem;
+  border-radius: 4rem;
+  font-size: 15rem;
 }
 /*# sourceMappingURL=main.css.map */
